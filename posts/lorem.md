@@ -1,5 +1,5 @@
 ---
-title: My First Blog Post
+title: Sample Post
 date: 12/01/2012
 draft: False
 ---
