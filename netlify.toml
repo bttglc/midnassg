@@ -1,0 +1,4 @@
+[build]
+  command = "python3 app.py prod"
+  publish = "build"
+  environment = { PYTHON_VERSION = "3.8" }

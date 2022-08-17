@@ -1,0 +1,37 @@
+{% extends "base.html" %} {% block content %}
+<div class="flex">
+  <img class="mx-auto w-24 rounded-full" src="/static/img/sample.png" />
+</div>
+<p>
+  Hi, I am Roberto Castellotti, a bear from Genova, Italy. I have studied in
+  <a href="https://liceocassini.it">Liceo Scientifico Cassini</a>. In 2022 I
+  graduated in <a href="https://corsi.unige.it/8759">Computer Science</a> at
+  <a href="https://unige.it">UniGE</a>.
+</p>
+<p>
+  I am always disassemblying stuff to understand what's happening and why, since
+  I simply cannot accept <em>"It Works"</em>. I guess you could say this is the
+  reason why in my spare time I like playing CTFs and studying cybersecurity
+  related arguments. Oh yes, I'm a
+  <a href="https://stallman.org/articles/on-hacking.html">hacker</a>.
+</p>
+<p>
+  Right now I'm into basically everything computer-science related, opensource,
+  webdev, cycling and bears.
+</p>
+
+{% for post in posts %}
+<div
+  class="py-0.5 flex justify-between border-b border-dashed border-t-0 border-r-0 border-l-0 border-gray-400"
+>
+  <a href="{{ url_for('posts', path=post.slug)}}">{{post.title}}</a>
+
+  <span>{{post.date}}</span>
+</div>
+{% endfor %}
+<div
+  class="py-0.5 flex justify-between border-b border-dashed border-t-0 border-r-0 border-l-0 border-gray-400"
+>
+  <a href="/quotes">quotes</a>
+</div>
+{% endblock %}
