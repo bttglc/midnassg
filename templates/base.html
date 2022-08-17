@@ -41,7 +41,7 @@
           @apply text-blue-800 no-underline hover:underline dark:text-blue-400;
         }
         table {
-          @apply text-xs table-auto sm:text-sm w-full mx-auto
+          @apply text-xs table-auto sm:text-sm w-full mx-auto border-collapse
         }
         thead >tr {
           @apply bg-gray-200 dark:bg-zinc-900 text-left border-solid border dark:border-white border-black;
@@ -50,11 +50,17 @@
           @apply border-solid border dark:border-white border-black;
         }
         td{
-          @apply  border border-solid dark:border-white border-black;
+          @apply  border border-solid dark:border-white border-black px-2;
 
         }
         blockquote {
           @apply bg-gray-100 dark:bg-zinc-900 px-2 py-1 rounded
+        }
+        hr {
+          @apply max-w-sm my-5
+        }
+        pre {
+          @apply rounded p-2 overflow-auto
         }
       }
     </style>
@@ -99,5 +105,12 @@
  body {
     font-family: 'Barlow';
   }
+  pre,code {
+    font-family: "JetBrains Mono" !important;
+  }
+  pre::-webkit-scrollbar {
+    display: none;
+  }
+  
 
 </style>
