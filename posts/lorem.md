@@ -75,39 +75,6 @@ def index():
     return render_template("index.html", posts=posts)
 ```
 
-```java
-java.io.FileNotFoundException: /etc/hadoop/conf/topology.table.file (No such file or directory)
-at java.io.FileInputStream.open0(Native Method)
-at java.io.FileInputStream.open(FileInputStream.java:195)
-at java.io.FileInputStream.<init>(FileInputStream.java:138)
-at java.io.FileInputStream.<init>(FileInputStream.java:93)
-at org.apache.hadoop.net.TableMapping$RawTableMapping.load(TableMapping.java:103)
-at org.apache.hadoop.net.TableMapping$RawTableMapping.resolve(TableMapping.java:129)
-at org.apache.hadoop.net.CachedDNSToSwitchMapping.resolve(CachedDNSToSwitchMapping.java:119)
-at org.apache.hadoop.yarn.util.RackResolver.coreResolve(RackResolver.java:101)
-at org.apache.hadoop.yarn.util.RackResolver.resolve(RackResolver.java:81)
-at org.apache.spark.scheduler.cluster.YarnScheduler.getRackForHost(YarnScheduler.scala:37)
-at org.apache.spark.scheduler.TaskSchedulerImpl$$anonfun$resourceOffers$1.apply(TaskSchedulerImpl.scala:373)
-at org.apache.spark.scheduler.TaskSchedulerImpl$$anonfun$resourceOffers$1.apply(TaskSchedulerImpl.scala:362)
-at scala.collection.Iterator$class.foreach(Iterator.scala:891)
-at scala.collection.AbstractIterator.foreach(Iterator.scala:1334)
-at scala.collection.IterableLike$class.foreach(IterableLike.scala:72)
-at scala.collection.AbstractIterable.foreach(Iterable.scala:54)
-at org.apache.spark.scheduler.TaskSchedulerImpl.resourceOffers(TaskSchedulerImpl.scala:362)
-at org.apache.spark.scheduler.cluster.CoarseGrainedSchedulerBackend$DriverEndpoint$$anonfun$2.apply(CoarseGrainedSchedulerBackend.scala:248)
-at org.apache.spark.scheduler.cluster.CoarseGrainedSchedulerBackend$DriverEndpoint$$anonfun$2.apply(CoarseGrainedSchedulerBackend.scala:240)
-at org.apache.spark.scheduler.cluster.CoarseGrainedSchedulerBackend.org$apache$spark$scheduler$cluster$CoarseGrainedSchedulerBackend$$withLock(CoarseGrainedSchedulerBackend.scala:693)
-at org.apache.spark.scheduler.cluster.CoarseGrainedSchedulerBackend$DriverEndpoint.org$apache$spark$scheduler$cluster$CoarseGrainedSchedulerBackend$DriverEndpoint$$makeOffers(CoarseGrainedSchedulerBackend.scala:240)
-at org.apache.spark.scheduler.cluster.CoarseGrainedSchedulerBackend$DriverEndpoint$$anonfun$receiveAndReply$1.applyOrElse(CoarseGrainedSchedulerBackend.scala:211)
-at org.apache.spark.rpc.netty.Inbox$$anonfun$process$1.apply$mcV$sp(Inbox.scala:105)
-at org.apache.spark.rpc.netty.Inbox.safelyCall(Inbox.scala:205)
-at org.apache.spark.rpc.netty.Inbox.process(Inbox.scala:101)
-at org.apache.spark.rpc.netty.Dispatcher$MessageLoop.run(Dispatcher.scala:221)
-at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-at java.lang.Thread.run(Thread.java:748)
-```
-
 ## Tables
 
 | Option | Description                                                               |
