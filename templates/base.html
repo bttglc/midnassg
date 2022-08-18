@@ -35,8 +35,11 @@
   </script>
   <style type="text/tailwindcss">
   @layer utilities {
-    code {
-	    @apply bg-gray-100 dark:bg-zinc-900 text-xs mb-3 rounded;
+    code:not(pre) {
+      @apply bg-gray-100 dark:bg-zinc-900 text-xs
+    }
+    .codehilite {
+	    @apply bg-gray-100 dark:bg-zinc-900 text-xs rounded p-2 overflow-auto;
     }
     a {
 	    @apply text-blue-800 no-underline hover:underline dark:text-blue-400;
@@ -58,9 +61,6 @@
     }
     hr {
 	    @apply max-w-sm my-5
-    }
-    pre {
-	    @apply rounded p-2 overflow-auto
     }
   }
   </style>
