@@ -1,115 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/static/pygments.css" />
-    <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
-    <script>
-      if (localStorage.theme === "dark") {
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/static/pygments.css" />
+  <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
+  <script>
+    if (localStorage.theme === "dark") {
+      document.documentElement.classList.add("dark");
+    }
+    tailwind.config = {
+      darkMode: "class"
+    };
+    function toggleTheme() {
+      if (localStorage.theme !== "dark") {
         document.documentElement.classList.add("dark");
+        localStorage.theme = "dark";
+      } else {
+        document.documentElement.classList.remove("dark");
+        localStorage.theme = "white";
       }
-      tailwind.config = {
-        darkMode: "class",
-     
-        corePlugins: {
-          preflight: false,
-        },
-      };
-      function toggleTheme() {
-        if (localStorage.theme !== "dark") {
-          document.documentElement.classList.add("dark");
-          localStorage.theme = "dark";
-        } else {
-          document.documentElement.classList.remove("dark");
-          localStorage.theme = "white";
-        }
-      }
-    </script>
-    <style type="text/tailwindcss">
-      @layer utilities {
-        .codehilite,
-        code, {
-          @apply bg-gray-100 dark:bg-zinc-900 text-xs mb-3 rounded;
-        }
-        a {
-          @apply text-blue-800 no-underline hover:underline dark:text-blue-400;
-        }
-        table {
-          @apply text-xs table-auto sm:text-sm w-full mx-auto border-collapse
-        }
-        thead >tr {
-          @apply bg-gray-200 dark:bg-zinc-900 text-left border-solid border dark:border-white border-black;
-        }
-       th {
-          @apply border-solid border dark:border-white border-black;
-        }
-        td{
-          @apply  border border-solid dark:border-white border-black px-2;
+    }
+  </script>
+  <style type="text/tailwindcss">
+  @layer utilities {
+    code {
+	    @apply bg-gray-100 dark: bg-zinc-900 text-xs mb-3 rounded;
+    }
+    a {
+	    @apply text-blue-800 no-underline hover: underline dark:text-blue-400;
+    }
+    table {
+	    @apply text-xs table-auto sm: text-sm w-full mx-auto border-collapse
+    }
+    thead>tr {
+	    @apply bg-gray-200 dark: bg-zinc-900 text-left border-solid border dark:border-white border-black;
+    }
+    th {
+	  @apply border-solid border dark: border-white border-black;
+    }
+    td {
+	    @apply border border-solid dark: border-white border-black px-2;
+    }
+    blockquote {
+	    @apply bg-gray-100 dark: bg-zinc-900 px-2 py-1 rounded
+    }
+    hr {
+	    @apply max-w-sm my-5
+    }
+    pre {
+	    @apply rounded p-2 overflow-auto
+    }
+  }
+  </style>
+</head>
 
-        }
-        blockquote {
-          @apply bg-gray-100 dark:bg-zinc-900 px-2 py-1 rounded
-        }
-        hr {
-          @apply max-w-sm my-5
-        }
-        pre {
-          @apply rounded p-2 overflow-auto
-        }
-      }
-    </style>
-  </head>
-
-  <body
-    class="text-sm sm:text-base w-11/12 md:w-3/4 xl:w-1/2 2xl:w-1/3 dark:bg-zinc-800 dark:text-white mx-auto"
-  >
-    <div id="content mx-auto">{% block content %}{% endblock %}</div>
-    <footer class="print:hidden flex-col pt-3 gap-x-2">
-      <div class="flex justify-center gap-x-2">
+<body class="text-sm sm:text-base w-11/12 md:w-3/4 xl:w-1/2 2xl:w-1/3 dark:bg-zinc-800 dark:text-white mx-auto">
+  <div id="content mx-auto">{% block content %}{% endblock %}</div>
+  <footer class="print:hidden flex-col pt-3 gap-x-2">
+    <div class="flex justify-center gap-x-2">
       <a href="https://gitlab.com/rcastellotti">/gitlab/</a>
       <a href="https://github.com/rcastellotti">/github/</a>
       <a href="https://t.me/rcastellotti">/telegram/</a>
       <a href="https://twitter.com/r2castellotti">/twitter/</a>
-      <a href="mailto:me@rcastellotti.dev">/email/</a></div>
-      <div class="text-sm flex justify-center gap-x-1"> made with ❤️  by <a href="https://rcastellotti.dev">rcastellotti</a>
-
-    </footer>
-  </footer>
-    <div
-      onclick="toggleTheme()"
-      class="print:hidden shadow-md fixed bottom-2 right-2 bg-gray-100 dark:bg-zinc-900 rounded w-8 h-8 flex justify-center items-center"
-    >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="16"
-        height="16"
-        fill="currentColor"
-        class="bi bi-circle-half"
-        viewBox="0 0 16 16"
-      >
-        <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" />
-      </svg>
+      <a href="mailto:me@rcastellotti.dev">/email/</a>
     </div>
-  </body>
+    <div class="text-sm flex justify-center gap-x-1"> made with ❤️ by <a
+        href="https://rcastellotti.dev">rcastellotti</a>
+
+  </footer>
+  </footer>
+  <div onclick="toggleTheme()"
+    class="print:hidden shadow-md fixed bottom-2 right-2 bg-gray-100 dark:bg-zinc-900 rounded w-8 h-8 flex justify-center items-center">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-half"
+      viewBox="0 0 16 16">
+      <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" />
+    </svg>
+  </div>
+</body>
+
 </html>
 
 
 <style>
-
- body {
+  body {
     font-family: 'Barlow';
   }
-  pre,code {
+
+  pre,
+  code {
     font-family: "JetBrains Mono" !important;
   }
-  pre::-webkit-scrollbar {
-    display: none;
-  }
-  
-
 </style>

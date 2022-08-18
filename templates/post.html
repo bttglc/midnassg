@@ -1,8 +1,9 @@
-{% extends "base.html" %} {% block content %}
-<header>
+{% extends "base.html" %} 
+{% block content %}
+<div>
   <a class="print:hidden" href="/">&laquo; /home/</a>
   <h1 class="leading-none">{{meta.title[0]}}</h1>
   <p>{{meta.date[0]}}</p>
-</header>
+</div>
 <article clas="text-justify">{{post|safe}}</article>
 {% endblock %}
