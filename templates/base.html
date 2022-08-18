@@ -17,7 +17,11 @@
       document.documentElement.classList.add("dark");
     }
     tailwind.config = {
-      darkMode: "class"
+      darkMode: "class",
+
+      corePlugins: {
+        preflight: false,
+      },
     };
     function toggleTheme() {
       if (localStorage.theme !== "dark") {
