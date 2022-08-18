@@ -13,3 +13,5 @@
 
 
 start dev server with: `python3 app.py dev`, build for production using: `python3 app.py build`
+
+For more info check out [this](http://rcastellotti.dev/posts/you-dont-need-a-ssg/) blog post.
