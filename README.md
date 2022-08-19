@@ -1,4 +1,5 @@
 `ydnassg` is a ~50 SLOC static website generator written in [Flask](https://flask.palletsprojects.com/en/2.2.x/) and made static with [Frozen-Flask](https://pythonhosted.org/Frozen-Flask/).  
+Publishing a post is simply a matter of creating a markdown file in `/posts` and adding the required metadata in YAML format, like in the examples, and if you want to know more simply read the whole entire 55 lines!!!
 
 ## features:
 
