@@ -1,9 +1,9 @@
 {% extends "base.html" %} 
 {% block content %}
-<div>
+<div class="flex flex-col p-0">
   <a class="print:hidden" href="/">&laquo; /home/</a>
-  <h1 class="leading-none">{{meta.title[0]}}</h1>
-  <p>{{meta.date[0]}}</p>
+  <h1 class="my-1 leading-none">{{meta.title[0]}}</h1>
+  <span>{{meta.date[0]}}</span>
 </div>
 <article clas="text-justify">{{post|safe}}</article>
 {% endblock %}
