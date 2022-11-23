@@ -3,7 +3,7 @@ Publishing a post is simply a matter of creating a markdown file in `/posts` and
 
 ## features:
 
-+ tailwindcss support
++ tailwindcss support (`npx tailwindcss -i ./static/input.css -o ./static/dist/output.css --watch`)
 + no config files
 + one click deploy with netlify
 + a lot of [markdown extensions](https://python-markdown.github.io/extensions/)
