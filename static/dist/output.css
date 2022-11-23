@@ -119,6 +119,8 @@ pre {
 }
 
 code {
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
   padding: 0.125rem;
   font-size: 0.75rem;
   line-height: 1rem

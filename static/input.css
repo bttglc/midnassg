@@ -31,7 +31,7 @@
     @apply rounded p-2 overflow-auto;
   }
   code {
-    @apply text-xs dark:bg-zinc-900 p-0.5;
+    @apply text-xs bg-gray-100 dark:bg-zinc-900 p-0.5;
   }
   img {
     @apply w-full;
