@@ -1,0 +1,43 @@
+/* @tailwind base;  commenting to ignore preflight*/
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  pre {
+    @apply bg-gray-100 dark:bg-zinc-900 text-xs mb-3 rounded;
+  }
+  a:not(#hid) {
+    @apply text-blue-800 no-underline hover:underline dark:text-blue-400;
+  }
+  table {
+    @apply text-xs table-auto sm:text-sm w-full mx-auto border-collapse;
+  }
+  thead > tr {
+    @apply bg-gray-200 dark:bg-zinc-900 text-left border-solid border dark:border-white border-black;
+  }
+  th {
+    @apply border-solid border dark:border-white border-black px-2;
+  }
+  td {
+    @apply border border-solid dark:border-white border-black px-2;
+  }
+  blockquote {
+    @apply bg-gray-100 dark:bg-zinc-900 px-2 py-1 rounded;
+  }
+  hr {
+    @apply max-w-sm my-5;
+  }
+  pre {
+    @apply rounded p-2 overflow-auto;
+  }
+  code {
+    @apply text-xs dark:bg-zinc-900 p-0.5;
+  }
+  img {
+    @apply w-full;
+  }
+  b,
+  strong {
+    @apply dark:text-white;
+  }
+}
